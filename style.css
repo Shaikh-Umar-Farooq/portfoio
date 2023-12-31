@@ -1,0 +1,288 @@
+:root {
+    --main-radius: 10px;
+    --main-padding: 5px;
+  }
+  
+  body {
+    font-family: "Inter", sans-serif;
+    background-color: #161616;
+  }
+  
+  .navbar {
+    max-width: 1300px;
+    margin: 1rem auto 1rem;
+    border-bottom: 1px solid #545454;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    }
+
+  .navbar img {
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .myimage{
+   display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  gap: 1rem;
+  }
+  .designation{
+    font-size: 0.7rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #8F8F8F;
+  }
+
+  .button{
+    background-color: #292929;
+    border: 1px solid #545454;
+    border-radius: 500px;
+    padding: 0.5rem 1rem;
+    color: #FFFFFF;
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+
+  }
+
+  .button:hover{
+    background-color: #545454;
+    transition: 0.8s;
+  }
+  .button img{
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+  
+  .container {
+    display: grid;
+    min-height: 50rem;
+    max-width: 1300px;
+    padding: 2rem;
+    margin: 0 auto 0;
+    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "experience clock cta projects"
+      "experience ido ido projects"
+      "experience ido ido skills"
+      "words education education skills";
+    grid-gap: 1.5rem;
+    font-weight: 400;
+    font-size: 12px;
+    color: #FFFFFF;
+  }
+
+  .heading{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+  
+
+.content_overflow{
+border-top:1px solid #545454;
+height: 90%;
+margin-top: 0.8rem;
+padding-top: 1rem;
+overflow: auto;
+}
+.block{
+  margin-bottom: 2rem ;
+  border-bottom: 1px solid #545454;
+  padding-bottom: 1rem;
+  margin-right: 1rem;
+}
+.block .gap{
+  height: 0.5rem;
+}
+.title{
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  line-height: 2rem;
+}
+.block .content{
+  color: #8F8F8F;
+  line-height: 15px;
+
+}
+.white{
+  color: #FFFFFF;
+}
+::-webkit-scrollbar {
+  width: 0.3rem;
+ 
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c5c5c5; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7e7e7e; 
+}
+  
+
+
+  
+  #experience {
+    background: #1E1E1E;
+    grid-area: experience;
+    padding: 1rem;
+  border: 1px solid #545454;
+    border-radius: var(--main-radius);
+  }
+  #ido {
+    background: #1E1E1E;
+    grid-area: ido;
+    padding: 1rem;
+    border: 1px solid #545454;
+    border-radius: var(--main-radius);
+  }
+
+
+
+
+  #words {
+    background: #1E1E1E;
+    grid-area: words;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  @font-face {
+    font-family: 'digital-7';
+    src: url('../fonts/digital-7.ttf');
+  }
+  #clock {
+    background: #1E1E1E;
+    grid-area: clock;
+    padding: 1rem;
+    border: 1px solid #545454;
+    border-radius: var(--main-radius);
+  }
+  .clock-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    
+  }
+  
+
+  #clocka {
+    font-family: 'digital-7', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-left: -12px;
+   
+
+}
+
+  
+  .location{
+    color: #8F8F8F;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  #cta {
+    background: #1E1E1E;
+    grid-area: cta;
+    padding: 1rem;
+  border: 1px solid #545454;
+    border-radius: var(--main-radius);
+  }
+  
+  #cta .button{
+    font-size: 0.7rem;
+  }
+  .download-arrow{
+    transform: rotate(135deg);
+  }
+
+  #projects {
+    background: #1E1E1E;
+    grid-area: projects;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  
+  #education {
+    background: #1E1E1E;
+    grid-area: education;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  #skills {
+    background: #1E1E1E;
+    grid-area: skills;
+    border-radius: var(--main-radius);
+    padding-top: var(--main-padding);
+  }
+  a {
+    text-align: center;
+    display: block;
+    font-family: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 1rem;
+  }
+  @media only screen and (max-width: 1100px) {
+    .container {
+      height: 100rem;
+      padding: 1rem;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      /* grid-template-rows:  20fr 30fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 10fr 10fr 5fr;  */
+      grid-template-rows: 20% 30% 15% 13% 15% ;
+      grid-template-areas:
+        "ido ido ido ido"
+        "experience experience projects projects"
+        "clock education education education"
+        "words words words cta"
+        "skills skills skills skills";
+    }
+  }
+  @media only screen and (max-width: 740px) {
+    .container {
+      height: 100rem;
+      padding: 0rem;
+      grid-gap: 1rem;
+      grid-template-columns: 1fr 1fr;
+      /* grid-template-rows:  20fr 30fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 10fr 10fr 5fr;  */
+      grid-template-rows: 30% 20% 20% 20% 20% 20% 14% ;
+      grid-template-areas:
+        "experience experience"
+        "ido ido"
+        "projects projects"
+        "education education"
+        "skills skills"
+        "words words"
+        "clock cta";
+    }
+  }
+
+  
