@@ -19,6 +19,18 @@
     padding: 20px 0;
     }
 
+  .footer{
+    font-size: 10px;
+    max-width: 1300px;
+    margin: 1rem auto 1rem;
+    border-top: 1px solid #545454;
+    display: flex;
+    flex-direction: row ;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+  }
+
   .navbar img {
     width: 4rem;
     height: 4rem;
@@ -71,7 +83,8 @@
     padding: 2rem;
     margin: 0 auto 0;
     grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+    grid-template-rows: 13rem 8rem 12rem 13rem ;
     grid-template-areas:
       "experience clock cta projects"
       "experience ido ido projects"
@@ -166,8 +179,14 @@ overflow: auto;
   #words {
     background: #1E1E1E;
     grid-area: words;
+    padding: 1rem;
+  border: 1px solid #545454;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+  }
+  .aboutme_content{
+   
+    height: 90%;
+    overflow: auto;
   }
   @font-face {
     font-family: 'digital-7';
@@ -226,21 +245,93 @@ overflow: auto;
   #projects {
     background: #1E1E1E;
     grid-area: projects;
+    padding: 1rem;
+  border: 1px solid #545454;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
   }
-  
+  .project_content{
+    margin-right: 1rem;
+  }
+
+  .project_card{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    gap: 1rem;
+    background-color: #1B1B1B;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  .arrow{
+    visibility: hidden;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    transition: visibility cubic-bezier(0.215, 0.610, 0.355, 1)  ease-in-out;;
+  }
+  .project_card:hover{
+    background-color: #292929;
+    transition: 0.8s;
+    cursor: pointer;
+  }
+  .project_card:hover .arrow {
+    visibility: visible;
+  }
   #education {
     background: #1E1E1E;
     grid-area: education;
+    padding: 1rem;
+  border: 1px solid #545454;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+  }
+
+  .grey{
+    color: #8F8F8F;
+  }
+
+  .education_content{
+    height: 90%;
+    overflow: auto;
+  }
+
+  .education_card{
+    border-bottom:2px solid #292929;
+    padding-bottom:0.5rem ;
+    margin-bottom:0.5rem ;
   }
   #skills {
     background: #1E1E1E;
     grid-area: skills;
+    padding: 1rem;
+  border: 1px solid #545454;
     border-radius: var(--main-radius);
-    padding-top: var(--main-padding);
+  }
+  .skillcontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+
+    flex-wrap: wrap;
+  }
+
+  .skillcard{
+    background-color: #292929;
+    border: 1px solid #545454;
+    border-radius: 500px;
+    padding: 0.5rem 1rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin-bottom: 0.2rem;
   }
   a {
     text-align: center;
@@ -265,6 +356,10 @@ overflow: auto;
         "words words words cta"
         "skills skills skills skills";
     }
+    .content_overflow{
+     height: 82%;
+     
+      }
   }
   @media only screen and (max-width: 740px) {
     .container {
@@ -283,6 +378,10 @@ overflow: auto;
         "words words"
         "clock cta";
     }
+    .content_overflow{
+      height: 88%;
+      
+       }
   }
 
   
