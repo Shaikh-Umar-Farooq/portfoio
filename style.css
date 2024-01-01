@@ -381,6 +381,9 @@ overflow: auto;
     .content_overflow{
       height: 88%;
        }
+       .footer{
+        visibility: hidden;
+       }
   }
 
   
