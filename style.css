@@ -368,7 +368,7 @@ overflow: auto;
       grid-gap: 1rem;
       grid-template-columns: 1fr 1fr;
       /* grid-template-rows:  20fr 30fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 10fr 10fr 5fr;  */
-      grid-template-rows: 30% 20% 20% 20% 20% 20% 14% ;
+      grid-template-rows: 30% 20% 20% 20% 20% 20% 13% ;
       grid-template-areas:
         "experience experience"
         "ido ido"
@@ -380,7 +380,6 @@ overflow: auto;
     }
     .content_overflow{
       height: 88%;
-      
        }
   }
 
