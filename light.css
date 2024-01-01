@@ -6,18 +6,19 @@
   body {
     margin-top: 0;
     font-family: "Inter", sans-serif;
-    background-color: #161616;
+    background-color: #F4F4F4;
   }
 
   .theme{
+    position: sticky;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: fit-content;
     margin: 0 auto 0;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 0.8rem;
-    background-color: #292929;
+    background-color: #000000;
     border: 1px solid #545454;
     border-radius: 0 0 10px 10px;
     padding: 0.5rem 1rem;
@@ -28,7 +29,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-    background-color: #161616;
+    background-color: #2d2d2d;
     padding: 0.2rem;
     margin-top: 0.5rem;
     border-radius: 500px;
@@ -84,13 +85,14 @@
     text-transform: uppercase;
     color: #8F8F8F;
   }
+  
 
   .button{
-    background-color: #292929;
-    border: 1px solid #545454;
+    background-color: #000000;
+    border: 1px solid #000000;
     border-radius: 500px;
     padding: 0.5rem 1rem;
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: 100;
     cursor: pointer;
@@ -128,7 +130,7 @@
     grid-gap: 1.5rem;
     font-weight: 400;
     font-size: 12px;
-    color: #FFFFFF;
+    color: #000000;
   }
 
   .heading{
@@ -157,7 +159,7 @@ overflow: auto;
 .title{
   font-size: 1rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #000000;
   line-height: 2rem;
 }
 .block .content{
@@ -166,7 +168,7 @@ overflow: auto;
 
 }
 .white{
-  color: #FFFFFF;
+  color: #000000;
 }
 ::-webkit-scrollbar {
   width: 0.3rem;
@@ -194,14 +196,14 @@ overflow: auto;
 
   
   #experience {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: experience;
     padding: 1rem;
   border: 1px solid #545454;
     border-radius: var(--main-radius);
   }
   #ido {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: ido;
     padding: 1rem;
     border: 1px solid #545454;
@@ -212,7 +214,7 @@ overflow: auto;
 
 
   #words {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: words;
     padding: 1rem;
   border: 1px solid #545454;
@@ -228,7 +230,7 @@ overflow: auto;
     src: url('../fonts/digital-7.ttf');
   }
   #clock {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: clock;
     padding: 1rem;
     border: 1px solid #545454;
@@ -263,7 +265,7 @@ overflow: auto;
   }
   
   #cta {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: cta;
     padding: 1rem;
   border: 1px solid #545454;
@@ -278,7 +280,7 @@ overflow: auto;
   }
 
   #projects {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: projects;
     padding: 1rem;
   border: 1px solid #545454;
@@ -296,9 +298,10 @@ overflow: auto;
     align-items: center;
     border-radius: 10px;
     gap: 1rem;
-    background-color: #1B1B1B;
+    background-color: #F5F5F5;
     padding: 1rem;
     margin-bottom: 1rem;
+    
   }
   .arrow{
     visibility: hidden;
@@ -308,15 +311,18 @@ overflow: auto;
     transition: visibility cubic-bezier(0.215, 0.610, 0.355, 1)  ease-in-out;;
   }
   .project_card:hover{
-    background-color: #292929;
+    background-color: #000000;
     transition: 0.8s;
     cursor: pointer;
   }
   .project_card:hover .arrow {
     visibility: visible;
   }
+  .project_card:hover .title {
+    color: #ffffff;
+  }
   #education {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: education;
     padding: 1rem;
   border: 1px solid #545454;
@@ -333,12 +339,12 @@ overflow: auto;
   }
 
   .education_card{
-    border-bottom:2px solid #292929;
+    border-bottom:2px solid #cccccc;
     padding-bottom:0.5rem ;
     margin-bottom:0.5rem ;
   }
   #skills {
-    background: #1E1E1E;
+    background: #ffffff;
     grid-area: skills;
     padding: 1rem;
   border: 1px solid #545454;
@@ -354,11 +360,11 @@ overflow: auto;
   }
 
   .skillcard{
-    background-color: #292929;
+    background-color: #F4F4F4;
     border: 1px solid #545454;
     border-radius: 500px;
     padding: 0.5rem 1rem;
-    color: #FFFFFF;
+    color: #000000;
     cursor: pointer;
     font-size: 12px;
     text-transform: uppercase;

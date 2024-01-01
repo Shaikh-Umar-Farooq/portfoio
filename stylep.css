@@ -18,6 +18,7 @@
     text-transform: uppercase;
     border-radius: 10px;
     font-size: 1rem;
+    box-shadow: 2px 4px 10px 0px #00000029;
   }
   
   @keyframes particle-animation-1 {

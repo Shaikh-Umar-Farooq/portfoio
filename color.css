@@ -6,7 +6,7 @@
   body {
     margin-top: 0;
     font-family: "Inter", sans-serif;
-    background-color: #161616;
+    background-color: #F1D05B;
   }
 
   .theme{
@@ -17,8 +17,8 @@
     margin: 0 auto 0;
     color: #FFFFFF;
     font-size: 0.8rem;
-    background-color: #292929;
-    border: 1px solid #545454;
+    background-color: #000000;
+    border: 1px solid #000000;
     border-radius: 0 0 10px 10px;
     padding: 0.5rem 1rem;
     cursor: pointer;
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: row;
     gap: 0.5rem;
-    background-color: #161616;
+    background-color: #171717;
     padding: 0.2rem;
     margin-top: 0.5rem;
     border-radius: 500px;
@@ -82,12 +82,12 @@
     font-size: 0.7rem;
     font-weight: 400;
     text-transform: uppercase;
-    color: #8F8F8F;
+    color: #78682D;
   }
 
   .button{
-    background-color: #292929;
-    border: 1px solid #545454;
+    background-color: #000000;
+    border: 1px solid #000000;
     border-radius: 500px;
     padding: 0.5rem 1rem;
     color: #FFFFFF;
@@ -103,7 +103,7 @@
   }
 
   .button:hover{
-    background-color: #545454;
+    background-color: #1e1900;
     transition: 0.8s;
   }
   .button img{
@@ -128,7 +128,7 @@
     grid-gap: 1.5rem;
     font-weight: 400;
     font-size: 12px;
-    color: #FFFFFF;
+    color: #000000;
   }
 
   .heading{
@@ -139,7 +139,7 @@
   
 
 .content_overflow{
-border-top:1px solid #545454;
+border-top:1px solid #000000;
 height: 90%;
 margin-top: 0.8rem;
 padding-top: 1rem;
@@ -147,7 +147,7 @@ overflow: auto;
 }
 .block{
   margin-bottom: 2rem ;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid #F4E8A3;
   padding-bottom: 1rem;
   margin-right: 1rem;
 }
@@ -157,16 +157,16 @@ overflow: auto;
 .title{
   font-size: 1rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: #000000;
   line-height: 2rem;
 }
 .block .content{
-  color: #8F8F8F;
+  color: #7F7855;
   line-height: 15px;
 
 }
 .white{
-  color: #FFFFFF;
+  color: #000000;
 }
 ::-webkit-scrollbar {
   width: 0.3rem;
@@ -175,48 +175,51 @@ overflow: auto;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 5px #7F7855; 
   border-radius: 10px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c5c5c5; 
+  background: #7F7855; 
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #7e7e7e; 
+  background: #7F7855; 
 }
   
 
 
   
   #experience {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: experience;
     padding: 1rem;
-  border: 1px solid #545454;
+  border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
   #ido {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: ido;
     padding: 1rem;
-    border: 1px solid #545454;
+    border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
 
 
 
 
   #words {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: words;
-    padding: 1rem;
-  border: 1px solid #545454;
+    padding: 1rem; 
+     border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
   .aboutme_content{
    
@@ -228,11 +231,12 @@ overflow: auto;
     src: url('../fonts/digital-7.ttf');
   }
   #clock {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: clock;
     padding: 1rem;
-    border: 1px solid #545454;
+    border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
   .clock-title{
     display: flex;
@@ -256,18 +260,19 @@ overflow: auto;
 
   
   .location{
-    color: #8F8F8F;
+    color: #7F7855;
     text-align: center;
     margin-top: 1rem;
     font-size: 1.5rem;
   }
   
   #cta {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: cta;
     padding: 1rem;
-  border: 1px solid #545454;
+    border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
   
   #cta .button{
@@ -278,11 +283,12 @@ overflow: auto;
   }
 
   #projects {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: projects;
     padding: 1rem;
-  border: 1px solid #545454;
+    border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
   .project_content{
     margin-right: 1rem;
@@ -296,7 +302,7 @@ overflow: auto;
     align-items: center;
     border-radius: 10px;
     gap: 1rem;
-    background-color: #1B1B1B;
+    background-color: #F4E8A3;
     padding: 1rem;
     margin-bottom: 1rem;
   }
@@ -308,23 +314,28 @@ overflow: auto;
     transition: visibility cubic-bezier(0.215, 0.610, 0.355, 1)  ease-in-out;;
   }
   .project_card:hover{
-    background-color: #292929;
+    background-color: #000000;;
     transition: 0.8s;
     cursor: pointer;
+    color: #ffffff;
   }
   .project_card:hover .arrow {
     visibility: visible;
   }
+  .project_card:hover .title {
+    color: #ffffff;
+  }
   #education {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: education;
     padding: 1rem;
-  border: 1px solid #545454;
+    border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
 
   .grey{
-    color: #8F8F8F;
+    color: #7F7855;
   }
 
   .education_content{
@@ -333,16 +344,17 @@ overflow: auto;
   }
 
   .education_card{
-    border-bottom:2px solid #292929;
+    border-bottom:2px solid #F4E8A3;
     padding-bottom:0.5rem ;
     margin-bottom:0.5rem ;
   }
   #skills {
-    background: #1E1E1E;
+    background: #FEF1AA;
     grid-area: skills;
     padding: 1rem;
-  border: 1px solid #545454;
+    border: 1px solid #000000;
     border-radius: var(--main-radius);
+    box-shadow: 4px 4px 0px rgb(0, 0, 0);
   }
   .skillcontainer{
     display: flex;
@@ -354,11 +366,11 @@ overflow: auto;
   }
 
   .skillcard{
-    background-color: #292929;
-    border: 1px solid #545454;
+    background-color: #F4E8A3;
+    border: 1px solid #000000;
     border-radius: 500px;
     padding: 0.5rem 1rem;
-    color: #FFFFFF;
+    color: #000000;
     cursor: pointer;
     font-size: 12px;
     text-transform: uppercase;
@@ -413,12 +425,13 @@ overflow: auto;
         "words words"
         "clock cta";
     }
+    
     #clocka {
-      font-size: 30px;
-      text-align: center;
-      margin-top: 1rem;
-      margin-left: -12px;
-    }
+        font-size: 30px;
+        text-align: center;
+        margin-top: 1rem;
+        margin-left: -12px;
+      }
     .content_overflow{
       height: 88%;
        }
