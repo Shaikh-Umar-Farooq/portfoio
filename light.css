@@ -1,436 +1,484 @@
 :root {
-    --main-radius: 10px;
-    --main-padding: 5px;
-  }
+  --main-radius: 10px;
+  --main-padding: 5px;
+}
+::selection {
+  color: rgb(255, 255, 255);
+  background: rgb(0, 0, 0);
+}
+
+body {
+  margin-top: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #F4F4F4;
+}
+
+.theme{
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto 0;
+  color: #ffffff;
+  font-size: 0.8rem;
+  background-color: #000000;
+  border: 1px solid #545454;
+  border-radius: 0 0 10px 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
   
-  body {
-    margin-top: 0;
-    font-family: "Inter", sans-serif;
-    background-color: #F4F4F4;
+}
+.theme-btn{
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  background-color: #2d2d2d;
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+  border-radius: 500px;
+  display: none;
+}
+
+.theme-btn img{
+  cursor: pointer;
+  width: 2rem;
+  height: 2rem;
+  margin: 0.2rem;
+
+}
+
+.navbar {
+  max-width: 1300px;
+  margin: 0rem auto 1rem;
+  border-bottom: 1px solid #545454;
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
   }
 
-  .theme{
-    position: sticky;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: fit-content;
-    margin: 0 auto 0;
-    color: #ffffff;
-    font-size: 0.8rem;
-    background-color: #000000;
-    border: 1px solid #545454;
-    border-radius: 0 0 10px 10px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    
-  }
-  .theme-btn{
-    display: flex;
-    flex-direction: row;
-    gap: 0.5rem;
-    background-color: #2d2d2d;
-    padding: 0.2rem;
-    margin-top: 0.5rem;
-    border-radius: 500px;
-    display: none;
-  }
-  
-  .theme-btn img{
-    cursor: pointer;
-    width: 2rem;
-    height: 2rem;
-    margin: 0.2rem;
+.footer{
+  font-size: 10px;
+  max-width: 1300px;
+  margin: 1rem auto 1rem;
+  border-top: 1px solid #545454;
+  display: flex;
+  flex-direction: row ;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
 
-  }
-  
-  .navbar {
-    max-width: 1300px;
-    margin: 0rem auto 1rem;
-    border-bottom: 1px solid #545454;
-    display: flex;
-    flex-direction: row ;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    }
+.navbar img {
+  width: 4rem;
+  height: 4rem;
+}
 
-  .footer{
-    font-size: 10px;
-    max-width: 1300px;
-    margin: 1rem auto 1rem;
-    border-top: 1px solid #545454;
-    display: flex;
-    flex-direction: row ;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-  }
+.myimage{
+ display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+gap: 1rem;
+}
+.designation{
+  font-size: 0.7rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #8F8F8F;
+}
 
-  .navbar img {
-    width: 4rem;
-    height: 4rem;
-  }
 
-  .myimage{
-   display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  gap: 1rem;
-  }
-  .designation{
-    font-size: 0.7rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #8F8F8F;
-  }
-  
+.button{
+  background-color: #000000;
+  border: 1px solid #000000;
+  border-radius: 500px;
+  padding: 0.5rem 1rem;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 100;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
 
-  .button{
-    background-color: #000000;
-    border: 1px solid #000000;
-    border-radius: 500px;
-    padding: 0.5rem 1rem;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 100;
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 0.5rem;
+}
 
-  }
+.button:hover{
+  background-color: #424141;
+  border: 1px solid #424141;
+  transition: 0.2s;
+}
+.button img{
+  width: 0.7rem;
+  height: 0.7rem;
+}
 
-  .button:hover{
-    background-color: #545454;
-    transition: 0.8s;
-  }
-  .button img{
-    width: 0.7rem;
-    height: 0.7rem;
-  }
-  
-  .container {
-    display: grid;
-    min-height: 50rem;
-    max-width: 1300px;
-    padding: 2rem;
-    margin: 0 auto 0;
-    grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-    /* grid-template-rows: 1fr 1fr 1fr 1fr; */
-    grid-template-rows: 13rem 8rem 12rem 13rem ;
-    grid-template-areas:
-      "experience clock cta projects"
-      "experience ido ido projects"
-      "experience ido ido skills"
-      "words education education skills";
-    grid-gap: 1.5rem;
-    font-weight: 400;
-    font-size: 12px;
-    color: #000000;
-  }
+.container {
+  display: grid;
+  min-height: 50rem;
+  max-width: 1300px;
+  padding: 2rem;
+  margin: 0 auto 0;
+  grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
+  /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+  grid-template-rows: 13rem 8rem 12rem 13rem ;
+  grid-template-areas:
+    "experience clock cta projects"
+    "experience ido ido projects"
+    "experience ido ido skills"
+    "words education education skills";
+  grid-gap: 1.5rem;
+  font-weight: 400;
+  font-size: 12px;
+  color: #000000;
+}
 
-  .heading{
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 400;
-  }
-  
+.heading{
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
 
 .content_overflow{
 border-top:1px solid #545454;
-height: 90%;
+height: 100%;
 margin-top: 0.8rem;
 padding-top: 1rem;
 overflow: auto;
 }
+
+
 .block{
-  margin-bottom: 2rem ;
-  border-bottom: 1px solid #545454;
-  padding-bottom: 1rem;
-  margin-right: 1rem;
+margin-bottom: 2rem ;
+border-bottom: 1px solid #545454;
+padding-bottom: 1rem;
+margin-right: 1rem;
 }
 .block .gap{
-  height: 0.5rem;
+height: 0.5rem;
 }
 .title{
-  font-size: 1rem;
-  font-weight: 600;
-  color: #000000;
-  line-height: 2rem;
+font-size: 1rem;
+font-weight: 600;
+color: #000000;
+line-height: 2rem;
 }
 .block .content{
-  color: #8F8F8F;
-  line-height: 15px;
+color: #8F8F8F;
+line-height: 15px;
 
 }
 .white{
-  color: #000000;
+color: #000000;
 }
 ::-webkit-scrollbar {
-  width: 0.3rem;
- 
+width: 0.3rem;
+height: 10%;
+
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+width: 1px;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #c5c5c5; 
-  border-radius: 10px;
+background: #9c9c9c; 
+
+border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #7e7e7e; 
+background: #5a5959; 
 }
-  
 
 
-  
-  #experience {
-    background: #ffffff;
-    grid-area: experience;
-    padding: 1rem;
+
+
+#experience {
+  background: #ffffff;
+  grid-area: experience;
+  padding: 1rem;
+border: 1px solid #545454;
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.experience_content{
+  height: 92.5%;
+  overflow: auto;
+}
+#ido {
+  background: #ffffff;
+  grid-area: ido;
+  padding: 1rem;
   border: 1px solid #545454;
-    border-radius: var(--main-radius);
-  }
-  #ido {
-    background: #ffffff;
-    grid-area: ido;
-    padding: 1rem;
-    border: 1px solid #545454;
-    border-radius: var(--main-radius);
-  }
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 
 
 
-  #words {
-    background: #ffffff;
-    grid-area: words;
-    padding: 1rem;
+#words {
+  background: #ffffff;
+  grid-area: words;
+  padding: 1rem;
+border: 1px solid #545454;
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.aboutme_content{
+ 
+  height: 80%;
+  overflow: auto;
+  padding-right: 1rem;
+  text-align: justify;
+}
+
+@font-face {
+  font-family: 'digital-7';
+  src: url('../fonts/digital-7.ttf');
+}
+#clock {
+  background: #ffffff;
+  grid-area: clock;
+  padding: 1rem;
   border: 1px solid #545454;
-    border-radius: var(--main-radius);
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.clock-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+
+#clocka {
+  font-family: 'digital-7', sans-serif;
+  font-size: 40px;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: -12px;
+ 
+
+}
+
+
+.location{
+  color: #8F8F8F;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+#cta {
+  background: #ffffff;
+  grid-area: cta;
+  padding: 1rem;
+border: 1px solid #545454;
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cta .button{
+  font-size: 0.7rem;
+}
+.download-arrow{
+  transform: rotate(135deg);
+}
+
+#projects {
+  background: #ffffff;
+  grid-area: projects;
+  padding: 1rem;
+border: 1px solid #545454;
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.project_content{
+  height: 89%;
+  overflow: auto;
+  padding-right: 1rem;
+}
+
+.project_card{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  gap: 1rem;
+  background-color: #F5F5F5;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  
+}
+.arrow{
+  visibility: hidden;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  transition: visibility cubic-bezier(0.215, 0.610, 0.355, 1)  ease-in-out;;
+}
+.project_card:hover{
+  background-color: #000000;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.project_card:hover .arrow {
+  visibility: visible;
+}
+.project_card:hover .title {
+  color: #ffffff;
+}
+#education {
+  background: #ffffff;
+  grid-area: education;
+  padding: 1rem;
+border: 1px solid #545454;
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.grey{
+  color: #8F8F8F;
+}
+
+.education_content{
+  height: 80%;
+  overflow: auto;
+  padding-right: 1rem;
+}
+
+.education_card{
+  border-bottom:2px solid #cccccc;
+  padding-bottom:0.5rem ;
+  margin-bottom:0.5rem ;
+}
+#skills {
+  background: #ffffff;
+  grid-area: skills;
+  padding: 1rem;
+border: 1px solid #545454;
+  border-radius: var(--main-radius);
+
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.skillcontainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  height: 90%;
+  overflow: auto;
+
+  flex-wrap: wrap;
+}
+
+.skillcard{
+  background-color: #F4F4F4;
+  border: 1px solid #545454;
+  border-radius: 500px;
+  padding: 0.5rem 1rem;
+  color: #000000;
+  cursor: pointer;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 0.2rem;
+}
+a {
+  text-align: center;
+  display: block;
+  font-family: inherit;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 1rem;
+}
+@media only screen and (max-width: 1100px) {
+  .container {
+    height: 100rem;
+    padding: 1rem;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-rows:  20fr 30fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 10fr 10fr 5fr;  */
+    grid-template-rows: 20% 30% 15% 13% 15% ;
+    grid-template-areas:
+      "ido ido ido ido"
+      "experience experience projects projects"
+      "clock education education education"
+      "words words words cta"
+      "skills skills skills skills";
   }
-  .aboutme_content{
+  .content_overflow{
+   height: 100%;
    
-    height: 90%;
-    overflow: auto;
-  }
-  @font-face {
-    font-family: 'digital-7';
-    src: url('../fonts/digital-7.ttf');
-  }
-  #clock {
-    background: #ffffff;
-    grid-area: clock;
-    padding: 1rem;
-    border: 1px solid #545454;
-    border-radius: var(--main-radius);
-  }
-  .clock-title{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    
-  }
-  
+    }
 
+    .skillcontainer{
+
+      height: 85%;
+    }
+}
+@media only screen and (max-width: 740px) {
+  .container {
+    height: 100rem;
+    padding: 0rem;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    /* grid-template-rows:  20fr 30fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 10fr 10fr 5fr;  */
+    grid-template-rows: 30% 20% 20% 20% 20% 20% 13rem ;
+    grid-template-areas:
+      "experience experience"
+      "ido ido"
+      "projects projects"
+      "education education"
+      "skills skills"
+      "words words"
+      "clock cta";
+  }
   #clocka {
-    font-family: 'digital-7', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     text-align: center;
     margin-top: 1rem;
     margin-left: -12px;
-   
+  }
+  .content_overflow{
+    height: 100%;
+     }
+     .footer{
+      visibility: hidden;
+     }
 
+    .skillcontainer{
+
+      height: 88%;
+    }
 }
 
-  
-  .location{
-    color: #8F8F8F;
-    text-align: center;
-    margin-top: 1rem;
-    font-size: 1.5rem;
-  }
-  
-  #cta {
-    background: #ffffff;
-    grid-area: cta;
-    padding: 1rem;
-  border: 1px solid #545454;
-    border-radius: var(--main-radius);
-  }
-  
-  #cta .button{
-    font-size: 0.7rem;
-  }
-  .download-arrow{
-    transform: rotate(135deg);
-  }
-
-  #projects {
-    background: #ffffff;
-    grid-area: projects;
-    padding: 1rem;
-  border: 1px solid #545454;
-    border-radius: var(--main-radius);
-  }
-  .project_content{
-    margin-right: 1rem;
-  }
-
-  .project_card{
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    gap: 1rem;
-    background-color: #F5F5F5;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    
-  }
-  .arrow{
-    visibility: hidden;
-    position: absolute;
-    right: 1rem;
-    top: 1rem;
-    transition: visibility cubic-bezier(0.215, 0.610, 0.355, 1)  ease-in-out;;
-  }
-  .project_card:hover{
-    background-color: #000000;
-    transition: 0.8s;
-    cursor: pointer;
-  }
-  .project_card:hover .arrow {
-    visibility: visible;
-  }
-  .project_card:hover .title {
-    color: #ffffff;
-  }
-  #education {
-    background: #ffffff;
-    grid-area: education;
-    padding: 1rem;
-  border: 1px solid #545454;
-    border-radius: var(--main-radius);
-  }
-
-  .grey{
-    color: #8F8F8F;
-  }
-
-  .education_content{
-    height: 90%;
-    overflow: auto;
-  }
-
-  .education_card{
-    border-bottom:2px solid #cccccc;
-    padding-bottom:0.5rem ;
-    margin-bottom:0.5rem ;
-  }
-  #skills {
-    background: #ffffff;
-    grid-area: skills;
-    padding: 1rem;
-  border: 1px solid #545454;
-    border-radius: var(--main-radius);
-  }
-  .skillcontainer{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-
-    flex-wrap: wrap;
-  }
-
-  .skillcard{
-    background-color: #F4F4F4;
-    border: 1px solid #545454;
-    border-radius: 500px;
-    padding: 0.5rem 1rem;
-    color: #000000;
-    cursor: pointer;
-    font-size: 12px;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: fit-content;
-    margin-bottom: 0.2rem;
-  }
-  a {
-    text-align: center;
-    display: block;
-    font-family: inherit;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 1rem;
-  }
-  @media only screen and (max-width: 1100px) {
-    .container {
-      height: 100rem;
-      padding: 1rem;
-      grid-gap: 1rem;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      /* grid-template-rows:  20fr 30fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 10fr 10fr 5fr;  */
-      grid-template-rows: 20% 30% 15% 13% 15% ;
-      grid-template-areas:
-        "ido ido ido ido"
-        "experience experience projects projects"
-        "clock education education education"
-        "words words words cta"
-        "skills skills skills skills";
-    }
-    .content_overflow{
-     height: 82%;
-     
-      }
-  }
-  @media only screen and (max-width: 740px) {
-    .container {
-      height: 100rem;
-      padding: 0rem;
-      grid-gap: 1rem;
-      grid-template-columns: 1fr 1fr;
-      /* grid-template-rows:  20fr 30fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 15fr 10fr 10fr 5fr;  */
-      grid-template-rows: 30% 20% 20% 20% 20% 20% 13rem ;
-      grid-template-areas:
-        "experience experience"
-        "ido ido"
-        "projects projects"
-        "education education"
-        "skills skills"
-        "words words"
-        "clock cta";
-    }
-    #clocka {
-      font-size: 30px;
-      text-align: center;
-      margin-top: 1rem;
-      margin-left: -12px;
-    }
-    .content_overflow{
-      height: 88%;
-       }
-       .footer{
-        visibility: hidden;
-       }
-  }
-
-  
