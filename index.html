@@ -1,253 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link id="themeCSS" rel="stylesheet" href="light.css"> 
-  <link rel="stylesheet" href="stylep.css">
-  <link rel="icon" href="./images/favicon.ico" >
-  <meta name="keywords" content=" umar shaikh, acm thapar,thapar univerity student,ui ux designer, UX/UI Design, UI/UX Projects, Electrical and Computer Engineering, Figma Prototyping, User Research Analysis, Usability Testing, Interaction Design, Product Management Skills, JavaScript Development, Database Management, MongoDB, MySQL, Innovation in Technology, User Interface Design, Web Development Skills, Cross-functional Team Collaboration, Leadership in ACM, Leadership in Volaverse, Google Analytics Certification, Case Studies, Gmail, TripSync, Creative Problem-solving, Human-Centered Design, Professional Communication Skills">
-  <meta name="description" content="Explore Umar Shaikh's portfolio showcasing innovative UX/UI projects, extensive expertise in UI/UX design, and a proven track record in enhancing user experiences. Discover a skilled Electrical and Computer Engineering student at Thapar Institute with a strong proficiency in technologies like Figma, JavaScript, and databases like MongoDB and MySQL. Delve into insightful case studies on Gmail and TripSync, along with leadership roles in ACM Thapar Patiala and Volaverse. Certificates in UX Design, Google Analytics, and Product Management validate a commitment to professional growth. Explore a world of creativity and innovation in UI/UX design and product management.">
-  <meta name="author" content="Umar Shaikh">
-
-  <title>Umar Shaikh</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="themeCSS" rel="stylesheet" href="light.css">
+    <link rel="stylesheet" href="stylep.css">
+    <link rel="icon" href="./images/favicon.ico">
+    <meta name="keywords" content="umar shaikh, acm thapar...">
+    <meta name="description" content="Explore Umar Shaikh's portfolio...">
+    <meta name="author" content="Umar Shaikh">
+    <title>Umar Shaikh</title>
 </head>
-
 <body>
-  
-  <div id="themeElement" class="theme">
-    <div class="theme-title">Switch Theme</div>
-    <div class="theme-btn">
-      <img id="darkModeBtn" src="./images/Cute Avatar.svg" alt="">
-      <img id="lightModeBtn" src="./images/Cute Avatar2.svg" alt="">
-      <img id="colorModeBtn" src="./images/Cute Avatar3.svg" alt="">
-    </div>
-  </div>
+    <!-- Theme Selector -->
+    <template id="theme-template">
+        <div id="themeElement"  class="theme">
+            <div class="theme-title">Switch Theme</div>
+            <div class="theme-btn">
+                <img id="darkModeBtn" src="./images/Cute Avatar.svg" alt="">
+                <img id="lightModeBtn" src="./images/Cute Avatar2.svg" alt="">
+                <img id="colorModeBtn" src="./images/Cute Avatar3.svg" alt="">
+            </div>
+        </div>
+    </template>
 
+    <!-- Navbar Template -->
+    <template id="navbar-template">
+        <div class="navbar">
+            <div class="myimage">
+                <img src="" alt="">
+                <div>
+                    <span class="white"></span><br>
+                    <span class="designation"></span>
+                </div>
+            </div>
+            <div class="button">
+                Contact
+                <img id="arrows" src="/images/arrow.svg" alt="arrow">
+            </div>
+        </div>
+    </template>
 
-  <div class="navbar">
-    <div class="myimage">
-      <img src="/images/Cute Avatar.svg" alt="umar shaikh image">
-      <div><span class="white">Umar Shaikh</span><br>
-        <span class="designation">Designer. Mentor. Coder</span>
-      </div>
-    </div>
-    <div class="button" onclick="location.href='mailto:smuf7080@gmail.com';">Contact
-      <img id="arrows" src="/images/arrow.svg" alt="arrow">
-    </div>
-  </div>
-  <div class="container">
-    <div id="experience">
-      <div class="heading">experience</div>
-      
-
-      <div class="content_overflow">
-        <div class="experience_content"> 
+    <!-- Experience Template -->
+    <template id="experience-template">
         <div class="block">
-          <span class="title">Executive Committee Member - UI UX Head</span>
-          <br>
-          <span class="content">
-            Boosted membership by adding 35 students through a targeted recruitment strategy that reached students from
-            diverse backgrounds and majors.<br>
-            <div class="gap"></div>
-            Organized and executed 10 workshops and events on a variety of topics related to UI/UX design, with a total
-            attendance of over 500 students.<br>
-            <div class="gap"></div>
-            Managed a team of 8 students and successfully completed all projects on time and within budget.<br>
-            <br>
-            <span class="white"> ACM Thapar</span><br>
-            Dec 2022 - Present
-          </span>
-
+            <span class="title"></span><br>
+            <span class="content">
+                <div class="achievements"></div>
+                <br>
+                <span class="white company"></span><br>
+                <span class="duration"></span>
+            </span>
         </div>
-        <div class="block">
-          <span class="title">UI UX Designer intern</span>
-          <br>
-          <span class="content">
-            Led end-to-end design process for Volaverse website redesign, including user research with 15 target
-            customers,
-            creation wireframes, interactive prototypes that increased click-through rate by 45%.<br>
-            <div class="gap"></div>
-            Collaborated with a 5-person cross-functional team to optimize site architecture, navigation, and
-            interfaces,
-            reducing bounce rate by 38%.<br> <br>
-            <span class="white"> Volaverse - educational metaverse</span> <br>
-            May - Aug 2023
-          </span>
-        </div>
-        
-      </div>
-    </div>
-    </div>
-    <div id="words">
-      <div class="heading">about me</div>
+    </template>
 
-      <div class="content_overflow">
-        <div class="aboutme_content">
+    <!-- About Me Template -->
+    <template id="aboutme-template">
+        <div class="aboutme_content"></div>
+    </template>
 
-          I'm not just bits and bytes, I'm a UX alchemist.
-          <br>
-          <br>
-          I don't just design interfaces, I craft experiences. From streamlining email chaos in Gmail to weaving
-          seamless travel plans in TripSync, I'm obsessed with turning pain points into "aha!" moments. Think of me as a
-          problem-solving wizard, armed with Figma spells and user research incantations to conjure up intuitive,
-          engaging tech that people actually love. ✨
-          <br>
-          <br>
+    <!-- What I Do Template -->
+    <template id="whatido-template">
+        <div class="particle"></div>
+    </template>
 
-          But I'm not just a lone wolf in the UX wilderness. I lead, I inspire, I build bridges between tech and humans.
-          As the UI/UX Head at ACM Thapar Patiala, I turned a small spark into a blazing fire, growing our community and
-          igniting design passion in hundreds of students.
-
-          So, if you're looking for a UX designer who's not afraid to dive deep into user needs, unleash creative magic,
-          and collaborate to build something truly groundbreaking, let's chat. Your digital dreams are my next potion to
-          brew.
-          <br>
-          <br>
-        </div>
-      </div>
-    </div>
-    <div id="ido">
-      <div class="heading">What i do</div>
-      <div class="x">
-        <div id="particle-container">
-          <div class="particle">data visualisation</div>
-          <div class="particle"> Product Management</div>
-          <div class="particle">coding</div>
-          <div class="particle">Branding</div>
-          <div class="particle">front-end development</div>
-          <div class="particle">UI/UX designing</div>
-
-
-        </div>
-      </div>
-    </div>
-
-    <div id="clock">
-      <div class="clock-title">
-        <div class="heading">clock</div>
-      </div>
-      <div class="content_overflow">
-        <div id="clocka">
-        </div>
-        <div class="location">Delhi, India</div>
-      </div>
-    </div>
-    <div id="cta">
-      <div class="heading">Get in Touch</div>
-      <div class="content_overflow">
-        <div class="button" onclick="location.href='mailto:smuf7080@gmail.com';">Contact Me
-          <img src="/images/arrow.svg" alt="arrow">
-        </div>
-        <br>
-        <div class="button" onclick="window.location.href='https://www.linkedin.com/in/umar-shaikh-96b7b31a5/';">Connect
-          <img src="/images/arrow.svg" alt="arrow">
-        </div>
-        <br>
-        <div class="button" onclick="location.href='/umar_shaikh_resume.pdf';" download>Download CV
-          <img class="download-arrow" src="/images/arrow.svg" alt="arrow">
-        </div>
-      </div>
-    </div>
-    <div id="projects">
-      <div class="heading">projects</div>
-      <div class="content_overflow">
-        <div class="project_content">
-          <div class="project_card"
-            onclick="location.href='https://www.behance.net/gallery/177252253/Vision-OS-Nike-UI-concept';">
-            <img src="./images/nike.svg" alt="">
+    <!-- Projects Template -->
+    <template id="project-template">
+        <div class="project_card">
+            <img src="" alt="">
             <div class="project-detail">
-              <span class="title">Nike UI Concept</span>
-              <br>
-              <span class="grey">
-                This UI concept reimagines Nike's online shopping experience for VisionOS
-              </span>
+                <span class="title"></span><br>
+                <span class="grey description"></span>
             </div>
             <div class="arrow"><img src="./images/arrow.svg" alt=""></div>
-          </div>
-          <div class="project_card"
-            onclick="location.href='https://www.behance.net/gallery/174989423/TripSync-UX-UI-Case-Study-(Travel-App)';">
-            <img src="./images/tripsync.svg" alt="">
-            <div class="project-detail">
-              <span class="title">TripSync</span>
-              <br>
-              <span class="grey">
-                TripSync is a travel planning app that helps you plan your trips with your friends and family.
-              </span>
+        </div>
+    </template>
+
+    <!-- Skills Template -->
+    <template id="skill-template">
+        <div class="skillcard"></div>
+    </template>
+
+    <!-- Education Template -->
+    <template id="education-template">
+        <div class="education_card">
+            <span class="title"></span><br>
+            <span class="content">
+                <span class="grey institution"></span><br>
+                <span class="duration"></span>
+            </span>
+        </div>
+    </template>
+
+    <!-- CTA Template -->
+    <template id="cta-template">
+        <div class="button">
+            <span></span>
+            <img src="/images/arrow.svg" alt="arrow">
+        </div>
+    </template>
+
+    <div id="themeElement"></div>
+    <div id="navbarContainer"></div>
+
+    <div class="container">
+        <div id="experience">
+            <div class="heading">experience</div>
+            <div class="content_overflow">
+                <div class="experience_content"></div>
             </div>
-            <div class="arrow"><img src="./images/arrow.svg" alt=""></div>
-          </div>
-          <div class="project_card"
-            onclick="location.href='https://www.behance.net/gallery/169859363/Gmail-UX-Case-Study';">
-            <img src="./images/gmail.svg" alt="">
-            <div class="project-detail">
-              <span class="title">Gmail UX case study</span>
-              <br>
-              <span class="grey">
-                We aimed to improve the user experience for Gmail users by introducing new features.
-              </span>
+        </div>
+
+        <div id="words">
+            <div class="heading">about me</div>
+            <div class="content_overflow"></div>
+        </div>
+
+        <div id="ido">
+            <div class="heading">What i do</div>
+            <div class="x">
+                <div id="particle-container"></div>
             </div>
-            <div class="arrow"><img src="./images/arrow.svg" alt=""></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="skills">
-      <div class="heading">skills</div>
-
-      <div class="content_overflow">
-        <div class="skillcontainer">
-          <div class="skillcard">figma</div>
         </div>
 
-
-      </div>
-    </div>
-    <div id="education">
-      <div class="heading">education & certificates</div>
-
-      <div class="content_overflow">
-        <div class="education_content">
-          <div class="education_card">
-            <span class="title">B.Tech in Electrical and Computer Science</span>
-            <br>
-            <span class="content">
-              <span class="grey">Thapar Institute of Engineering and Technology</span><br>
-              Sept 2021 - June 2025
-            </span>
-          </div>
-          <div class="education_card">
-            <span class="title"> Introduction to UX Design </span>
-            <br>
-            <span class="content">
-              <span class="grey">Georgia Institute of Technology</span><br>
-              June 2023
-            </span>
-          </div>
-          <div class="education_card">
-            <span class="title"> Introduction to Data Analytics </span>
-            <br>
-            <span class="content">
-              <span class="grey">IBM - Coursera</span><br>
-              Nov 2023
-            </span>
-          </div>
-          <br><br>
+        <div id="clock">
+            <div class="clock-title">
+                <div class="heading">clock</div>
+            </div>
+            <div class="content_overflow">
+                <div id="clocka"></div>
+                <div class="location">Delhi, India</div>
+            </div>
         </div>
-      </div>
+
+        <div id="cta">
+            <div class="heading">Get in Touch</div>
+            <div class="content_overflow"></div>
+        </div>
+
+        <div id="projects">
+            <div class="heading">projects</div>
+            <div class="content_overflow">
+                <div class="project_content"></div>
+            </div>
+        </div>
+
+        <div id="skills">
+            <div class="heading">skills</div>
+            <div class="content_overflow">
+                <div class="skillcontainer"></div>
+            </div>
+        </div>
+
+        <div id="education">
+            <div class="heading">education & certificates</div>
+            <div class="content_overflow">
+                <div class="education_content"></div>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="footer grey">
-    <div>&copy;
-      <span id="currentYear"> </span>
+
+    <div class="footer grey">
+        <div>&copy; <span id="currentYear"></span></div>
+        <div>
+            <span>Design & Developed by</span> <span class="white">Umar Shaikh</span>
+        </div>
     </div>
-    <div>
-      <span>Desin & Developed by</span> <span class="white">Umar shaikh</span>
-    </div>
-  </div>
-  <script src="script.js"></script>
-  <script src="admin.js"></script>
+
+    <script src="data.js"></script>
+    <script src="render_content.js"></script>
 </body>
-
 </html>
