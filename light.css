@@ -13,40 +13,7 @@ body {
   background-color: #F4F4F4;
 }
 
-.theme{
-  position: sticky;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-  margin: 0 auto 0;
-  color: #ffffff;
-  font-size: 0.8rem;
-  background-color: #000000;
-  border: 1px solid #545454;
-  border-radius: 0 0 10px 10px;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  
-}
-.theme-btn{
-  display: flex;
-  flex-direction: row;
-  gap: 0.5rem;
-  background-color: #2d2d2d;
-  padding: 0.2rem;
-  margin-top: 0.5rem;
-  border-radius: 500px;
-  display: none;
-}
 
-.theme-btn img{
-  cursor: pointer;
-  width: 2rem;
-  height: 2rem;
-  margin: 0.2rem;
-
-}
 
 .navbar {
   max-width: 1300px;
@@ -56,8 +23,9 @@ body {
   flex-direction: row ;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
-  }
+    padding: 20px 0;
+  position: relative;
+}
 
 .footer{
   font-size: 10px;
@@ -105,13 +73,48 @@ gap: 1rem;
   justify-content: space-between;
   align-items: center;
   gap: 0.5rem;
-
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .button:hover{
-  background-color: #424141;
-  border: 1px solid #424141;
-  transition: 0.2s;
+  transition: all 0.3s ease;
+}
+
+.button:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.272),
+    rgba(255, 255, 255, 0.372),
+    rgba(255, 255, 255, 0.272),
+    transparent
+  );
+  animation: buttonShimmer 0.6s ease-out;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes buttonShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+.button span,
+.button img {
+  position: relative;
+  z-index: 2;
 }
 .button img{
   width: 0.7rem;
@@ -301,7 +304,11 @@ border: 1px solid #545454;
 }
 
 #cta .button{
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  height: 1.2rem;
+  margin-bottom: 0.5rem;
+  
 }
 .download-arrow{
   transform: rotate(135deg);
@@ -311,9 +318,8 @@ border: 1px solid #545454;
   background: #ffffff;
   grid-area: projects;
   padding: 1rem;
-border: 1px solid #545454;
+  border: 1px solid #545454;
   border-radius: var(--main-radius);
-
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .project_content{
@@ -333,25 +339,290 @@ border: 1px solid #545454;
   background-color: #F5F5F5;
   padding: 1rem;
   margin-bottom: 1rem;
-  
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
-.arrow{
-  visibility: hidden;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  transition: visibility cubic-bezier(0.215, 0.610, 0.355, 1)  ease-in-out;;
-}
+
 .project_card:hover{
   background-color: #000000;
-  transition: 0.8s;
+  transition: all 0.3s ease;
   cursor: pointer;
+  border: 1px solid #333;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
-.project_card:hover .arrow {
-  visibility: visible;
+
+.project_card:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.272),
+    rgba(255, 255, 255, 0.372),
+    rgba(255, 255, 255, 0.272),
+    transparent
+  );
+  animation: cardShimmer 0.6s ease-out;
+  z-index: 1;
+  pointer-events: none;
 }
+
+@keyframes cardShimmer {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+
 .project_card:hover .title {
   color: #ffffff;
+  z-index: 2;
+}
+
+
+
+.project_card:hover .description {
+  color: #cccccc;
+  z-index: 2;
+}
+
+/* Ensure project card content is above shimmer */
+.project_card .project-detail,
+.project_card img {
+  position: relative;
+  z-index: 2;
+}
+
+/* Green blinking dot for projects heading */
+#projects .heading {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#projects .heading::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  animation: blink 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  25% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  75% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+}
+
+/* Cute Black Cat Animation */
+.cat-container {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 40px;
+  z-index: 10;
+}
+
+.cat {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cat Body */
+.cat::before {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 15px;
+  width: 30px;
+  height: 18px;
+  background: #1a1a1a;
+  border-radius: 15px 15px 8px 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Cat Head */
+.cat::after {
+  content: '';
+  position: absolute;
+  bottom: 22px;
+  left: 8px;
+  width: 20px;
+  height: 16px;
+  background: #1a1a1a;
+  border-radius: 50% 50% 40% 40%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Cat Ears */
+.cat-ears {
+  position: absolute;
+  bottom: 35px;
+  left: 10px;
+  width: 16px;
+  height: 8px;
+}
+
+.cat-ears::before,
+.cat-ears::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-bottom: 8px solid #1a1a1a;
+}
+
+.cat-ears::before {
+  left: 0;
+}
+
+.cat-ears::after {
+  right: 0;
+}
+
+/* Cat Tail */
+.cat-tail {
+  position: absolute;
+  bottom: 12px;
+  right: 8px;
+  width: 3px;
+  height: 20px;
+  background: #1a1a1a;
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: tailWag 1.5s ease-in-out infinite;
+}
+
+/* Cat Eyes */
+.cat-eyes {
+  position: absolute;
+  bottom: 26px;
+  left: 12px;
+  width: 12px;
+  height: 4px;
+}
+
+.cat-eyes::before,
+.cat-eyes::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: blink 3s ease-in-out infinite;
+}
+
+.cat-eyes::before {
+  left: 2px;
+}
+
+.cat-eyes::after {
+  right: 2px;
+}
+
+/* Cat Legs */
+.cat-legs {
+  position: absolute;
+  bottom: 0;
+  left: 18px;
+  width: 24px;
+  height: 8px;
+}
+
+.cat-legs::before,
+.cat-legs::after {
+  content: '';
+  position: absolute;
+  width: 3px;
+  height: 8px;
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+
+.cat-legs::before {
+  left: 3px;
+}
+
+.cat-legs::after {
+  right: 3px;
+}
+
+
+@keyframes tailWag {
+  0%, 100% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+}
+
+@keyframes legWalk {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
+}
+
+/* Default cat sitting */
+.cat {
+  transform: translateX(0px) scaleX(1);
+  transition: transform 0.3s ease-out;
+}
+
+/* Cat states for magnetic following */
+.cat.idle {
+  transition: transform 0.5s ease-out;
+}
+
+.cat.walking-left,
+.cat.walking-right {
+  transition: transform 0.3s ease-out;
+}
+
+/* Cat legs walking animation when moving */
+.cat.walking-left .cat-legs::before,
+.cat.walking-left .cat-legs::after,
+.cat.walking-right .cat-legs::before,
+.cat.walking-right .cat-legs::after {
+  animation: legWalk 0.4s ease-in-out infinite;
+}
+
+@keyframes legWalk {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-1px);
+  }
 }
 #education {
   background: #ffffff;

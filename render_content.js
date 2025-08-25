@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Theme
-    const themeTemplate = document.getElementById('theme-template');
-    const themeClone = themeTemplate.content.cloneNode(true);
-    document.getElementById('themeElement').appendChild(themeClone);
-
     // Navbar
     const navbarTemplate = document.getElementById('navbar-template');
     const navbarClone = navbarTemplate.content.cloneNode(true);
@@ -93,9 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
         ctaContainer.appendChild(ctaClone);
-        if (portfolioData.cta.indexOf(item) !== portfolioData.cta.length - 1) {
-            ctaContainer.appendChild(document.createElement('br'));
-        }
+        
     });
 
     // Set current year in footer
@@ -116,51 +109,48 @@ document.addEventListener('DOMContentLoaded', () => {
     updateClock();
     setInterval(updateClock, 1000);
 
-    // Theme functionality
-    function setMode(mode) {
-        const linkElement = document.getElementById('themeCSS');
-        if (mode === 'dark') {
-            linkElement.href = 'style.css';
-        } else if (mode === 'light') {
-            linkElement.href = 'light.css';
-        } else if (mode === 'color') {
-            linkElement.href = 'color.css';
-        }
+    // Cat magnetic following logic
+    function initializeCatFollowing() {
+        const navbar = document.querySelector('.navbar');
+        const cat = document.querySelector('.cat');
+        
+        if (!navbar || !cat) return;
+        
+        navbar.addEventListener('mousemove', (e) => {
+            const navbarRect = navbar.getBoundingClientRect();
+            const cursorX = e.clientX - navbarRect.left;
+            const navbarWidth = navbarRect.width;
+            
+            // Calculate relative position (0 to 1)
+            const relativeX = Math.max(0, Math.min(1, cursorX / navbarWidth));
+            
+            // Map to cat movement range (-80px to +80px from center)
+            const catOffset = (relativeX - 0.5) * 160;
+            
+            // Remove existing classes
+            cat.classList.remove('walking-left', 'walking-right', 'idle');
+            
+            // Determine direction and add appropriate class
+            if (catOffset < -10) {
+                cat.classList.add('walking-left');
+            } else if (catOffset > 10) {
+                cat.classList.add('walking-right');
+            } else {
+                cat.classList.add('idle');
+            }
+            
+            // Apply smooth magnetic movement
+            cat.style.transform = `translateX(${catOffset}px) scaleX(${catOffset > 10 ? -1 : 1})`;
+        });
+        
+        navbar.addEventListener('mouseleave', () => {
+            // Cat returns to center when mouse leaves navbar
+            cat.classList.remove('walking-left', 'walking-right');
+            cat.classList.add('idle');
+            cat.style.transform = 'translateX(0px) scaleX(1)';
+        });
     }
-
-    const themeElement = document.getElementById('themeElement');
-    const themeTitle = document.querySelector('.theme-title');
-    const darkModeBtn = document.getElementById('darkModeBtn');
-    const lightModeBtn = document.getElementById('lightModeBtn');
-    const colorModeBtn = document.getElementById('colorModeBtn');
-    const myImage = document.querySelector('.myimage img');
-
-    themeElement.addEventListener('click', function() {
-        const themeBtn = this.querySelector('.theme-btn');
-        themeBtn.style.display = themeBtn.style.display === 'flex' ? 'none' : 'flex';
-    });
-
-    // Theme button hover effects
-    darkModeBtn.addEventListener('mouseover', () => themeTitle.textContent = 'Dark');
-    darkModeBtn.addEventListener('mouseout', () => themeTitle.textContent = 'Switch Theme');
-    lightModeBtn.addEventListener('mouseover', () => themeTitle.textContent = 'Light');
-    lightModeBtn.addEventListener('mouseout', () => themeTitle.textContent = 'Switch Theme');
-    colorModeBtn.addEventListener('mouseover', () => themeTitle.textContent = 'Color');
-    colorModeBtn.addEventListener('mouseout', () => themeTitle.textContent = 'Switch Theme');
-
-    // Theme switching with image changes
-    darkModeBtn.addEventListener('click', () => {
-        setMode('dark');
-        myImage.src = './images/Cute Avatar.svg';
-    });
-
-    lightModeBtn.addEventListener('click', () => {
-        setMode('light');
-        myImage.src = './images/Cute Avatar2.svg';
-    });
-
-    colorModeBtn.addEventListener('click', () => {
-        setMode('color');
-        myImage.src = './images/Cute Avatar3.svg';
-    });
+    
+    // Initialize cat following after a small delay to ensure DOM is ready
+    setTimeout(initializeCatFollowing, 500);
 });

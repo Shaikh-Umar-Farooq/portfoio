@@ -1,8 +1,8 @@
 const portfolioData = {
     navbar: {
-        image: "/images/Cute Avatar.svg",
+        image: "./images/Cute Avatar2.svg",
         name: "Umar Shaikh",
-        designation: "Designer. Mentor. Coder",
+        designation: "Product Management. Vibe Coding. Designing.",
         email: "smuf7080@gmail.com"
     },
     experience: [
