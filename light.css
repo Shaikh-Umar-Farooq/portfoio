@@ -718,6 +718,9 @@ a {
     }
 }
 @media only screen and (max-width: 740px) {
+  .navbar .button{
+    width: 80px !important;
+  }
   .container {
     height: 100rem;
     padding: 0rem;
@@ -753,3 +756,8 @@ a {
     }
 }
 
+@media only screen and (max-width: 450px) {
+  .navbar .button{
+   display: none;
+  }
+}
